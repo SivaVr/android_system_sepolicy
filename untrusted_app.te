@@ -193,10 +193,8 @@ neverallow untrusted_app {
   -vfat
 
 #  For exfat and f2fs/ext4 sdcards via sdcardfs
-ifelse(shipping_build, `true', ,`
-  -exfat
-  -fuseblk
-  -ntfs
+ifelse(shipping_build, `true', ,`  
+  -fuseblk  
   -sdcard_posix
 ')
 
